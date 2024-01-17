@@ -15,7 +15,7 @@ const initialGameBoard =[
   [null,null,null]
   ];
 
-function deriveActivePlayer(gameTurns) {
+function deriveActivePlayer (gameTurns) {
   let currentPlayer = 'X';
 
   if(gameTurns.length > 0 && gameTurns[0].player === 'X') {
@@ -26,7 +26,7 @@ function deriveActivePlayer(gameTurns) {
 
 
 function App() {
-   const [players,setPlayers] = useState( PLAYERS)  // Old player name //
+   const [players,setPlayers] = useState( PLAYERS) 
    const [gameTurns,setGameTurns] = useState([]);
    const activePlayer = deriveActivePlayer(gameTurns);
 
@@ -34,7 +34,7 @@ function App() {
       let gameBoard= [...initialGameBoard.map(array => [...array])];
     for(const turn of gameTurns) {
         const { square,player} = turn;
-        const {row,col} =square;
+        const {row,col} = square;
 
         gameBoard[row][col] = player;
     }
