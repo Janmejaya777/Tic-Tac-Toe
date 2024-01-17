@@ -67,10 +67,10 @@ h1 {
   border: 2px solid transparent;
 }
 
-#players.highlight-player li.active {
+/* #players.highlight-player li.active {
   border-color: #f6e35a;
   animation: pulse 2s infinite ease-in-out;
-}
+} */
 
 #players.highlight-player li.active .player-name,
 #players.highlight-player li.active .player-symbol {
@@ -78,7 +78,7 @@ h1 {
 }
 
 #players button {
-  width: 3rem;
+  width: 1rem;
   border: none;
   background: none;
   color: #c3ba78;
@@ -137,8 +137,6 @@ ol {
   padding: 0;
 }
 
-
-
 #game-board {
   display: flex;
   flex-wrap: wrap;
@@ -167,14 +165,30 @@ ol {
   font-size: 5rem;
   cursor: pointer;
   font-family: 'Caprasimo', cursive;
-  padding: 1rem;
+  padding: none;
 }
 
-@media (max-width:530px){
+@media (max-width:550px){
+
+  #players {
+    display: inline-block;
+   }
+
   #game-board button {
     width: 6rem;
     height: 6rem;
+    padding: none;
   }
+  #players li {
+    width: 50%;
+   }
+
+   .player input {
+    width: 20rem;
+   }
+   #players.highlight-player{
+    animation: none;
+   }
 }
 
 #game-over {
